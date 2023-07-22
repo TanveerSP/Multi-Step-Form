@@ -1,0 +1,149 @@
+:root {
+  --primary-color: #5F4B8B;
+  --second-color: #FF6F61;
+  --therd-color: #000000;
+  --forth-color: #fff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient( to right, #5F4B8B, #FF6F61 );
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 360px;
+  height: 400px;
+  margin: 8% auto;
+  background: var(--forth-color);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--therd-color);
+}
+
+.container form {
+  width: 280px;
+  position: absolute;
+  top: 100px;
+  left: 40px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px 5px;
+  margin: 5px 0;
+  border: 0;
+  border-bottom: 1px solid var(--therd-color);
+  outline: none;
+  background: transparent;
+}
+
+::placeholder {
+  color: var(--therd-color);
+}
+
+.btn-box {
+  width: 100%;
+  margin: 30px auto;
+  text-align:center;
+}
+
+form button {
+  width: 110px;
+}
+
+button {
+  border: none;
+  color: var(--forth-color);
+  background-image: linear-gradient(30deg, #5F4B8B,#FF6F61);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6rem 1.5rem;
+  cursor:pointer;
+}
+
+button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+}
+
+
+#Form2 {
+  left: 450px;
+}
+
+#Form3 {
+  left: -450px;
+}
+
+.step-row {
+  width: 360px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -1px 5px -1px var(--therd-color);
+  position: relative;
+}
+
+.step-col {
+  width: 120px;
+  text-align:center;
+  color: var(--therd-color);
+  position: relative;
+}
+
+#progress {
+  position: absolute;
+  height: 100%;
+  width: 120px;
+  background: linear-gradient(to right, #5F4B8B, #FF6F61);
+  transition: 1s;
+}
+
+#progress::after {
+  content: '';
+  height: 0;
+  width: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  border-left:20px solid var(--second-color)
+}
+
+@keyframes pulse512 {
+  0%{
+    box-shadow: 0 0 0 0 #5F4B8B;
+  }
+
+  70%{
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+  100%{
+    box-shadow: 0 0 0 0 rgb (218 103 68 / 0%);
+  }
+  
+}
+
+
+
+
+
